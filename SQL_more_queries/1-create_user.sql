@@ -1,11 +1,7 @@
--- Ce script crée l'utilisateur du serveur MySQL user_0d_1 avec tous les privilèges
--- et définit le mot de passe sur user_0d_1_pwd.
+-- Creates the MySQL server user user_0d_1.
 
--- Créer l'utilisateur si il n'existe pas
+-- Create the user user_0d_1 if it does not already exist
 CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
 
--- Accorder tous les privilèges sur toutes les bases de données et tables
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost' WITH GRANT OPTION;
-
--- Appliquer les changements
-FLUSH PRIVILEGES;
+-- Grant all privileges on the MySQL server to user_0d_1
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
