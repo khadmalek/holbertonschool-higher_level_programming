@@ -1,7 +1,9 @@
--- Creates the MySQL server user user_0d_1.
+-- Script to create table id_not_null if it doesn't exist
 
--- Create the user user_0d_1 if it does not already exist
-CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
+-- Check if the table id_not_null exists
+CREATE TABLE IF NOT EXISTS id_not_null (
+    id INT DEFAULT 1,
+    name VARCHAR(256)
+);
 
--- Grant all privileges on the MySQL server to user_0d_1
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
+-- This line ensures that the table will have the two columns and their requirements
