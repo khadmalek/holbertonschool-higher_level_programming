@@ -32,3 +32,4 @@ for row in results:
 # Close the cursor and database connection
 cursor.close()
 db.close()
+
